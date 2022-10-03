@@ -1,0 +1,104 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+SCRIPT_DIR=/home/tirtha/.config/i3blocks/blocks
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[pacman-updates]
+command=$SCRIPT_DIR/arch-update
+markup=pango
+interval= 3600
+WATCH=^linux.* ^pacman.*
+BASE_COLOR=#5fff5f
+UPDATE_COLOR=#FFFF85
+LABEL= 
+
+[wifi]
+command=$SCRIPT_DIR/wifi
+label= 
+INTERFACE=wlp5s0
+interval=1
+#COLOR_GE80=#00FF00
+#COLOR_GE60=#FFF600
+#COLOR_GE40=#FFAE00
+#COLOR_LOWR=#FF0000
+#COLOR_DOWN=#FF0000
+
+[ethernet]
+command=$SCRIPT_DIR/ethernet
+#label=<span color="#89cff0"></span>
+instance=enp3s0
+interval=1
+
+[cpu_usage]
+command=$SCRIPT_DIR/cpu_usage
+interval=10
+LABEL= 
+#min_width=CPU: 100.00%
+T_WARN=50
+T_CRIT=80
+DECIMALS=2
+COLOR_NORMAL=#EBDBB2
+COLOR_WARN=#FFFC00
+COLOR_CRIT=#FF0000
+
+[backlight]
+command=$SCRIPT_DIR/backlight
+label=<span color="#f1fa8c"></span> 
+interval=20
+STEP_SIZE=5
+#USE_SUDO=0
+
+[volume-pulseaudio]
+command=$SCRIPT_DIR/volume-pulseaudio
+interval=persist
+SUBSCRIBE=1
+USE_ALSA_NAME=1
+
+[miccontrol]
+command=$SCRIPT_DIR/miccontrol
+#label=MIC 
+SOURCE=alsa_input.pci-0000_00_1f.3.analog-stereo
+interval=10
+signal=10
+
+[battery2]
+command=$SCRIPT_DIR/battery2
+markup=pango
+interval=1
+
+[calendar]
+command=$SCRIPT_DIR/calendar
+interval=1
+label=<span color="#6495ed">  </span>
+#DATEFMT=+%I:%M:%S %P
+# SHORTFMT=+%H:%M:%S
+HEIGHT=180
+WIDTH=220
+
