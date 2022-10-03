@@ -10,7 +10,9 @@ Gaps can be configured with keybindings and various things like brightness can b
 
 Theme Catppuccin ( Cursors , dunst , gedit , grub , gtk , kitty , sublime-text ) are from [catppucin github official repo .](https://github.com/catppuccin/catppuccin.git)
 
-Bash prompt is using [Synth-shell prompt](https://github.com/andresgongora/synth-shell.git)
+Bash prompt is using [Synth-shell prompt](https://github.com/andresgongora/synth-shell.git).
+
+i3blocks are made and modified using [i3blocks-contrib](https://github.com/vivien/i3blocks-contrib.git).
 
 Rofi theme is custom made by me.
 
