@@ -18,5 +18,5 @@ Rofi theme is custom made by me.
 
 Wallpaper made by me using Catppuccin color palette.
 
-![out](https://user-images.githubusercontent.com/99326134/193569099-ae478247-1c05-4dbf-9f38-92ce3156c41f.png)
+
 
